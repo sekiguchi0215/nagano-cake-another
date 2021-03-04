@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 	namespace :public do
 		get "/about" => "homes#about"
 		delete "/cart_items/destroy_all" => "cart_items#destroy_all"
-		resoureces :items, only: [:index, :show, :new] do
+		resources :items, only: [:index, :show, :new] do
 			get :search, on: :collection
 		end
 		resources :cart_items
