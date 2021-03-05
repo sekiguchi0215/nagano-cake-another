@@ -19,7 +19,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :email, "メールアドレス" %><br />
+      <%= f.label :email, "メールアドレス" %>
       <%= f.email_field :email, autocomplete: "email" %>
     </div>
 
@@ -30,7 +30,7 @@
 
     <div class="field member-address">
       <%= f.label :address, "住所" %>
-      <%= f.text_field :address, autocomplete: "address", collection: JpPrefecture::Prefecture.all, :value_method => :name, include_blank: "都道府県" %>
+      <%= f.text_field :address, autocomplete: "address", collection: JpPrefecture::Prefecture.all, :value_method => :name, :value => "", include_blank: "都道府県" %>
       <!-- "include_blank"を記述すると、、先頭を空の選択肢に出来る。今回の場合は、"都道府県"という文字列を選択肢に追加？ -->
     </div>
 
@@ -41,14 +41,14 @@
 
     <div class="field">
       <%= f.label :password, "パスワード（6文字以上）" %>
-      <% if @minimum_password_length %>
+      <!-- <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
+      <% end %><br /> -->
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation, "パスワード（確認用）" %><br />
+      <%= f.label :password_confirmation, "パスワード（確認用）" %>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 

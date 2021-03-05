@@ -7,25 +7,23 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Admin.create!(
-	email: "admin@admin",
+	email: "admin@admin.com",
 	password: "admin0",
 	password_confirmation: "admin0"
 )
 
-5.times do |n|
-	Member.create!(
-		email: "a#{n+1}@a",
-		first_name: "member#{n+1}",
-		last_name: "member#{n+1}",
-		first_name_kana: "メンバー#{n+1}",
-		last_name_kana: "めんばー#{n+1}",
-		postal_code: "#{n+1}234567",
-		address: "東京都杉並区阿佐ヶ谷南 むつみ荘#{n+1}号室",
-		phone_number: "0901234567#{n+1}",
-		password: "aaaaaa",
-		password_confirmation: "aaaaaa"
-	)
-end
+Member.create!(
+  first_name: "春日",
+  last_name: "俊彰",
+  first_name_kana: "カスガ",
+  last_name_kana: "トシアキ",
+  email: "aa@aa.com",
+  postal_code: "1660004",
+  address: "東京都杉並区阿佐谷南",
+  phone_number: "09012345678",
+  password: "aaaaaa",
+  password_confirmation: "aaaaaa"
+)
 
 Genre.create!(
 	[
